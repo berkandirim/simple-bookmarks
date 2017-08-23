@@ -141,6 +141,8 @@
                 if (URLregex.test(this.URL)) {
                     this.bookmarks.push({ title: this.title, url: this.URL });
                     localStorage.bookmarks = JSON.stringify(this.bookmarks);
+                    this.title = '';
+                    this.URL = '';
                 } else {
                     this.errorMessage = 'Please enter a valid URL including http:// or https://'
                 }
